@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* font */
+    --fontFamily: 'Overpass', sans-serif;
+    --bold:700;
+    --regular:400;
+    --fontSize:15px;
+    /* text */
+    --orange:hsl(25, 97%, 53%);
+    --white:hsl(0, 0%, 100%);
+    --lightGray:hsl(217, 12%, 63%);
+    --mediumGray: hsl(216, 12%, 54%);
+    --darkBlue:hsl(213, 19%, 18%);
+    --veryveryveryDarkBlue:hsl(216, 12%, 8%);
+
+}
+body{
+    font-family: var(--fontFamily);
+    font-size: var(--fontSize);
+    background-color: var(--veryveryveryDarkBlue);
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height:100vh;
+   
+
+   
+}
+.logo{
+    padding: 0.8rem;
+    margin-left: 0.5rem;
+    background-color: var(--darkBlue);
+    
+    border-radius: 50%;
+}
+ .flip-card-inner {
+   
+    width: 100%;
+    height: 100%;
+    /* background-color: var(--darkBlue); */
+    background:linear-gradient(251deg, #1f2630 50%, var(--veryveryveryDarkBlue) 100%);
+    border-radius: 12px;
+    position: relative;
+   
+   
+}
+.main-box{
+    margin-top: 0.6rem;
+    margin-left: 0.5rem;
+}
+.front-card , .back-card{
+   min-height: 23rem;
+   width: 100%;
+   margin-top: 2rem;
+   border-radius: 25px;
+   
+}
+.front-card{
+    padding: 0.5rem;
+    /* min-height: 21rem;
+    width: 100%; */
+    text-align: start;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    /* display: none; */
+    
+}
+.question{
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: var(--bold);
+    margin-left: 0.5rem;
+    margin-top: 1.2rem;
+    position: relative;
+    right: 0.5rem;
+
+}
+
+.info{
+    margin-top: 0.9rem;
+    line-height: 1.3rem;
+   
+    color: var(--mediumGray);
+    padding: 0.5rem;
+    position: relative;
+    right: 0.5rem;
+   
+  
+}
+.buttons-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    
+    
+}
+.button-rate{
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align:center;
+    gap: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.rate{
+   
+    border-radius: 50%;
+    width:40px ;
+    height:40px;
+    border: none;
+    background-color: var(--darkBlue);
+    opacity: 50%;
+    color: var(--lightGray);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: var(--bold);
+}
+.rate:hover{
+    background-color: var(--orange);
+    color: var(--white);
+}
+.submit{
+    width: 18rem;
+    padding:0.8rem;
+    border-radius: 2rem;
+    border: 1px solid black;
+    background-color: var(--orange);
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: var(--bold);
+    cursor: pointer;
+    margin-right: 1.7rem;
+
+}
+.submit:hover{
+    background-color: var(--white);
+    color: var(--orange);
+}
+/* back card */
+.back-card{
+    
+    padding: 1rem;
+    background-color: var(--darkBlue);
+    border-radius: 12px;
+   
+    /* height: 55%;
+    width: 28rem; */
+    text-align: center;
+    position: absolute;
+    display:none;
+    min-height: 21rem;
+   width: 90%;
+   background:linear-gradient(251deg, #1f2630 50%, var(--veryveryveryDarkBlue) 100%);
+    
+}
+
+
+.thankYou{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.rate-text{
+    background-color:var(--darkBlue);
+    color: var(--orange);
+    padding:0.5rem;
+    border-radius: 6rem;
+    
+}
+
+.small-back-container{
+    margin-top: 1rem;
+    color: var(--white);
+}
+
+.thankYou-text{
+    font-size: 1.5rem;
+    font-weight: var(--bold);
+     margin-bottom: 1rem;
+}
+.info-back-text{
+    margin-bottom: 1rem;
+    color: var(--lightGray);
+    font-size: 0.9rem;
+}
+
+/* try to animate the card */
+ .animate{
+    animation: spin 1.5s forwards;
+}
+
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+/* animation on empty submit */
+.shake{
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake{
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* media queries ,try to use rems */
+@media screen and (min-width:30rem){
+    .flip-card-inner , .back-card{
+        width: 26rem;
+        height: 28rem;
+        border-radius: 2rem;
+    }
+   .flip-card-inner{
+       padding: 1rem;
+   }
+  .logo{
+      margin-bottom: 1rem;
+  }
+  .question{
+      font-size: 1.8rem;
+      position: relative;
+      right: 1.1rem;
+      
+     
+  }
+ .info{
+     position: relative;
+     bottom: .7rem;
+     right: 1rem;
+ }
+ .button-rate{
+     gap: 1.4rem;
+     
+ }
+ .rate{
+    width: 50px;
+    height: 50px;
+ }
+ .submit{
+     width:21rem ;
+     
+ }
+
+ .thankYou{
+     margin-top: 1.3rem;
+ }
+ .thankYou-text{
+     position: relative;
+     top: 1rem;
+     font-size: 1.8rem;
+ }
+ .info-back-text{
+     padding: 1.7rem;
+     position: relative;
+     bottom: 1rem;
+     font-weight: var(--bold);
+     color: var(--mediumGray);
+    opacity: 50%;
+ }
+}

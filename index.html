@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- my style -->
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="flip-card-inner">
+      <!-- front card start -->
+      <div class="front-card">
+        <img src="images/icon-star.svg" alt="icon-start" class="logo">
+        <!-- main section with question -->
+         <main class="main-box">
+           <h1 class="question"> How did we do?</h1>
+            <p class="info"> Please let us know how we did with your support request. All feedback is appreciated 
+              to help us improve our offering!
+            </p>
+         </main>
+         <!-- buttons rate -->
+         <div class="buttons-container">
+           <div class="button-rate">
+
+           <button class="rate" type="radio">1</button>
+           <button class="rate" type="radio">2</button>
+           <button class="rate" type="radio">3</button>
+           <button class="rate" type="radio">4</button>
+           <button class="rate" type="radio">5</button>
+          </div>
+          <button type="submit" class="submit">Submit</button>
+         </div>
+      </div>
+      <!-- front card end -->
+    </div>
+      <!-- back-card start -->
+      
+     
+      <div class="back-card  animate">
+        <!-- illustration -->
+        <img src="images/illustration-thank-you.svg" alt="illustration-thank-you" class="thankYou">
+        <!-- main section of the back card -->
+        <p class="rate-text"></p>
+        <div class="small-back-container">
+        <p class="thankYou-text">Thank you!</p>
+        <p class="info-back-text">
+          We appreciate you taking the time to give a rating. If you ever need more support, 
+          don’t hesitate to get in touch!
+        </p>
+      </div>
+      </div>
+         
+    
+      <!-- back-card end -->
+    
+  </div>
+
+  <!-- Rating state start -->
+<!-- 
+  How did we do?
+
+  Please let us know how we did with your support request. All feedback is appreciated 
+  to help us improve our offering!
+
+  1 2 3 4 5
+
+  Submit
+
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+
+  <!-- You selected Add rating here out of 5 -->
+
+  <!-- Thank you!
+
+  We appreciate you taking the time to give a rating. If you ever need more support, 
+  don’t hesitate to get in touch! --> 
+
+  <!-- Thank you state end -->
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">SuperOzzy</a>.
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
