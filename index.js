@@ -12,7 +12,7 @@ buttons.forEach((button) =>{
         // target the text content of the button
        rate=event.target.textContent;
      //add the color of click buttons
-      button.classList.toggle("rate-clicked");
+      button.classList.add("rate-clicked");
     //    console.log(rate);
        rateText.textContent='You selected ' + rate + ' of 5!';
     })
