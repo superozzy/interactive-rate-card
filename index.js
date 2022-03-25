@@ -11,8 +11,7 @@ buttons.forEach((button) =>{
     button.addEventListener('click' , (event) =>{
         // target the text content of the button
        rate=event.target.textContent;
-     //add the color of click buttons
-      button.classList.add("rate-clicked");
+     
     //    console.log(rate);
        rateText.textContent='You selected ' + rate + ' of 5!';
     })
@@ -26,7 +25,9 @@ function nextCard(){
         submit.classList.toggle('shake');
         return;
     }else{
-
+     
+//add the color of click buttons
+      buttons.classList.add("rate-clicked");
     frontCard.style.display = 'none';
     backCard.style.display = 'block';
     backCard.classList.add('animate')
