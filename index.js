@@ -21,7 +21,7 @@ buttons.forEach((button) =>{
 
 function nextCard(){
     if(!rate){
-        submit.classList.add('shake');
+        submit.classList.toggle('shake');
         return;
     }else{
 
