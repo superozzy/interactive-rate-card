@@ -136,8 +136,11 @@ body{
     font-weight: var(--bold);
 }
 .rate:hover{
-    background-color: var(--orange);
+    background-color: var(--lightgray);
     color: var(--white);
+}
+.rate-clicked{
+    background-color:var(--orange);
 }
 .submit{
     width: 18rem;
