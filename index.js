@@ -26,8 +26,7 @@ function nextCard(){
         return;
     }else{
      
-//add the color of click buttons
-      buttons.classList.add("rate-clicked");
+
     frontCard.style.display = 'none';
     backCard.style.display = 'block';
     backCard.classList.add('animate')
